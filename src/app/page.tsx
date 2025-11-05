@@ -48,7 +48,7 @@ export default function AddUserPage() {
 
   return (
 
-    <div className=" w-90 md:w-140 md:h-130 card text-white m-auto rounded-2xl flex flex-col gap-10">
+    <div className=" w-90 md:w-140 md:h-110 h-100 card text-white m-auto rounded-2xl flex flex-col gap-10">
       <div className=' mt-10 ml-10'>
         <h1 className='font-bold text-3xl text-green-500'>Personal Info</h1>
         <p className='text-gray-400'>Enter this info:</p>
