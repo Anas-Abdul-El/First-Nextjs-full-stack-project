@@ -58,7 +58,7 @@ const config: runtime.GetPrismaClientConfig = {
   },
   "inlineSchema": "generator client {\n  provider     = \"prisma-client\"\n  output       = \"../src/app/generated/prisma\"\n  binaryTarget = \"debian-openssl-3.0.x\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Info {\n  id          Int    @id @default(autoincrement())\n  name        String\n  phoneNumber Int\n  email       String @unique\n}\n",
   "inlineSchemaHash": "4790cb53a9b89b55f14c7e4a71bf4d4d94ce07952042b42112ca7699a4bb8f2d",
-  "copyEngine": true,
+  "copyEngine": false,
   "runtimeDataModel": {
     "models": {},
     "enums": {},
