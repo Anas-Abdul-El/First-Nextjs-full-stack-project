@@ -1,6 +1,5 @@
 import prisma from "../lib/prisma";
 
-
 type info = {
     name: string,
     email: string
@@ -22,15 +21,23 @@ export async function addInfo({ name, email }: info) {
 
 export async function getInfo(email: string) {
 
-    const user = await prisma.info.findMany({
-        where: {
-            email: email,
+    try {
+
+
+        const user = await prisma.info.findUnique({
+            where: {
+                email: email,
+            }
+        })
+
+        if (!user) {
+            return false
         }
-    })
 
-    if (!user[0]) {
-        return false
+
+        return { user }
+    } catch (error) {
+        console.error(error);
+
     }
-
-    return { user }
 }

@@ -22,7 +22,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "D:\\full-stack project\\f1th-one\\src\\app\\generated\\prisma",
+      "value": "d:\\full-stack project\\f1th-one\\src\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -37,7 +37,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\full-stack project\\f1th-one\\prisma\\schema.prisma",
+    "sourceFilePath": "d:\\full-stack project\\f1th-one\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../../prisma",
@@ -58,7 +58,7 @@ const config: runtime.GetPrismaClientConfig = {
   },
   "inlineSchema": "generator client {\n  provider     = \"prisma-client\"\n  output       = \"../src/app/generated/prisma\"\n  binaryTarget = \"debian-openssl-3.0.x\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Info {\n  id    Int    @id @default(autoincrement())\n  name  String\n  email String @unique\n}\n",
   "inlineSchemaHash": "c8d471eb62a45cbad0db6ec0d909d5fdb19c9405ae1c6d6a43d85bcd857a900a",
-  "copyEngine": false,
+  "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
     "enums": {},
