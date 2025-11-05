@@ -22,7 +22,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "d:\\full-stack project\\f1th-one\\src\\app\\generated\\prisma",
+      "value": "D:\\full-stack project\\f1th-one\\src\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -37,7 +37,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "d:\\full-stack project\\f1th-one\\prisma\\schema.prisma",
+    "sourceFilePath": "D:\\full-stack project\\f1th-one\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../../prisma",
