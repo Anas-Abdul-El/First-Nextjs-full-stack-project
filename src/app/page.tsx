@@ -4,8 +4,7 @@ import { useState } from "react";
 export default function AddUserPage() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phoneNumber: "",
+    email: ""
   });
 
   const [message, setMessage] = useState("");
@@ -37,7 +36,7 @@ export default function AddUserPage() {
       if (!res.ok) throw new Error(data.error || "حدث خطأ");
 
       setMessage("✅ تم الإرسال بنجاح!");
-      setFormData({ name: "", email: "", phoneNumber: "" });
+      setFormData({ name: "", email: "" });
     } catch (err: any) {
       setMessage(`❌ خطأ: ${err.message}`);
     }
@@ -66,16 +65,6 @@ export default function AddUserPage() {
           name="email"
           placeholder="الإيميل"
           value={formData.email}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        />
-
-        <input
-          type="text"
-          name="phoneNumber"
-          placeholder="الرقم"
-          value={formData.phoneNumber}
           onChange={handleChange}
           className="border p-2 rounded"
           required

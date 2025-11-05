@@ -10,8 +10,7 @@ datasource db {
 }
 
 model Info {
-  id          Int    @id @default(autoincrement())
-  name        String
-  phoneNumber Int
-  email       String @unique
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
 }

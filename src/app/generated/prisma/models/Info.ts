@@ -27,32 +27,27 @@ export type AggregateInfo = {
 
 export type InfoAvgAggregateOutputType = {
   id: number | null
-  phoneNumber: number | null
 }
 
 export type InfoSumAggregateOutputType = {
   id: number | null
-  phoneNumber: number | null
 }
 
 export type InfoMinAggregateOutputType = {
   id: number | null
   name: string | null
-  phoneNumber: number | null
   email: string | null
 }
 
 export type InfoMaxAggregateOutputType = {
   id: number | null
   name: string | null
-  phoneNumber: number | null
   email: string | null
 }
 
 export type InfoCountAggregateOutputType = {
   id: number
   name: number
-  phoneNumber: number
   email: number
   _all: number
 }
@@ -60,32 +55,27 @@ export type InfoCountAggregateOutputType = {
 
 export type InfoAvgAggregateInputType = {
   id?: true
-  phoneNumber?: true
 }
 
 export type InfoSumAggregateInputType = {
   id?: true
-  phoneNumber?: true
 }
 
 export type InfoMinAggregateInputType = {
   id?: true
   name?: true
-  phoneNumber?: true
   email?: true
 }
 
 export type InfoMaxAggregateInputType = {
   id?: true
   name?: true
-  phoneNumber?: true
   email?: true
 }
 
 export type InfoCountAggregateInputType = {
   id?: true
   name?: true
-  phoneNumber?: true
   email?: true
   _all?: true
 }
@@ -179,7 +169,6 @@ export type InfoGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArg
 export type InfoGroupByOutputType = {
   id: number
   name: string
-  phoneNumber: number
   email: string
   _count: InfoCountAggregateOutputType | null
   _avg: InfoAvgAggregateOutputType | null
@@ -209,14 +198,12 @@ export type InfoWhereInput = {
   NOT?: Prisma.InfoWhereInput | Prisma.InfoWhereInput[]
   id?: Prisma.IntFilter<"Info"> | number
   name?: Prisma.StringFilter<"Info"> | string
-  phoneNumber?: Prisma.IntFilter<"Info"> | number
   email?: Prisma.StringFilter<"Info"> | string
 }
 
 export type InfoOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
   email?: Prisma.SortOrder
 }
 
@@ -227,13 +214,11 @@ export type InfoWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.InfoWhereInput[]
   NOT?: Prisma.InfoWhereInput | Prisma.InfoWhereInput[]
   name?: Prisma.StringFilter<"Info"> | string
-  phoneNumber?: Prisma.IntFilter<"Info"> | number
 }, "id" | "email">
 
 export type InfoOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
   email?: Prisma.SortOrder
   _count?: Prisma.InfoCountOrderByAggregateInput
   _avg?: Prisma.InfoAvgOrderByAggregateInput
@@ -248,85 +233,72 @@ export type InfoScalarWhereWithAggregatesInput = {
   NOT?: Prisma.InfoScalarWhereWithAggregatesInput | Prisma.InfoScalarWhereWithAggregatesInput[]
   id?: Prisma.IntWithAggregatesFilter<"Info"> | number
   name?: Prisma.StringWithAggregatesFilter<"Info"> | string
-  phoneNumber?: Prisma.IntWithAggregatesFilter<"Info"> | number
   email?: Prisma.StringWithAggregatesFilter<"Info"> | string
 }
 
 export type InfoCreateInput = {
   name: string
-  phoneNumber: number
   email: string
 }
 
 export type InfoUncheckedCreateInput = {
   id?: number
   name: string
-  phoneNumber: number
   email: string
 }
 
 export type InfoUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   email?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type InfoUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   email?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type InfoCreateManyInput = {
   id?: number
   name: string
-  phoneNumber: number
   email: string
 }
 
 export type InfoUpdateManyMutationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   email?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type InfoUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   email?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type InfoCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
   email?: Prisma.SortOrder
 }
 
 export type InfoAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
 }
 
 export type InfoMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
   email?: Prisma.SortOrder
 }
 
 export type InfoMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
   email?: Prisma.SortOrder
 }
 
 export type InfoSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  phoneNumber?: Prisma.SortOrder
 }
 
 export type StringFieldUpdateOperationsInput = {
@@ -346,32 +318,28 @@ export type IntFieldUpdateOperationsInput = {
 export type InfoSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   name?: boolean
-  phoneNumber?: boolean
   email?: boolean
 }, ExtArgs["result"]["info"]>
 
 export type InfoSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   name?: boolean
-  phoneNumber?: boolean
   email?: boolean
 }, ExtArgs["result"]["info"]>
 
 export type InfoSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   name?: boolean
-  phoneNumber?: boolean
   email?: boolean
 }, ExtArgs["result"]["info"]>
 
 export type InfoSelectScalar = {
   id?: boolean
   name?: boolean
-  phoneNumber?: boolean
   email?: boolean
 }
 
-export type InfoOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "phoneNumber" | "email", ExtArgs["result"]["info"]>
+export type InfoOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "email", ExtArgs["result"]["info"]>
 
 export type $InfoPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Info"
@@ -379,7 +347,6 @@ export type $InfoPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
     name: string
-    phoneNumber: number
     email: string
   }, ExtArgs["result"]["info"]>
   composites: {}
@@ -806,7 +773,6 @@ export interface Prisma__InfoClient<T, Null = never, ExtArgs extends runtime.Typ
 export interface InfoFieldRefs {
   readonly id: Prisma.FieldRef<"Info", 'Int'>
   readonly name: Prisma.FieldRef<"Info", 'String'>
-  readonly phoneNumber: Prisma.FieldRef<"Info", 'Int'>
   readonly email: Prisma.FieldRef<"Info", 'String'>
 }
     
