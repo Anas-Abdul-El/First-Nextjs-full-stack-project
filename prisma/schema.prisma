@@ -1,0 +1,17 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/app/generated/prisma"
+  binaryTarget = "debian-openssl-3.0.x"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Info {
+  id          Int    @id @default(autoincrement())
+  name        String
+  phoneNumber Int
+  email       String @unique
+}
