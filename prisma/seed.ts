@@ -3,17 +3,15 @@ import prisma from "../lib/prisma";
 
 type info = {
     name: string,
-    phoneNumber: number,
     email: string
 }
 
-export async function addInfo({ name, phoneNumber, email }: info) {
+export async function addInfo({ name, email }: info) {
     try {
 
         await prisma.info.create({
             data: {
                 name,
-                phoneNumber,
                 email,
             }
         })
