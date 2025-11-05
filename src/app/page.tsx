@@ -5,7 +5,7 @@ export default function AddUserPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    number: "",
+    phoneNumber: "",
   });
 
   const [message, setMessage] = useState("");
@@ -37,7 +37,7 @@ export default function AddUserPage() {
       if (!res.ok) throw new Error(data.error || "حدث خطأ");
 
       setMessage("✅ تم الإرسال بنجاح!");
-      setFormData({ name: "", email: "", number: "" });
+      setFormData({ name: "", email: "", phoneNumber: "" });
     } catch (err: any) {
       setMessage(`❌ خطأ: ${err.message}`);
     }
@@ -73,9 +73,9 @@ export default function AddUserPage() {
 
         <input
           type="text"
-          name="number"
+          name="phoneNumber"
           placeholder="الرقم"
-          value={formData.number}
+          value={formData.phoneNumber}
           onChange={handleChange}
           className="border p-2 rounded"
           required
