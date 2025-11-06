@@ -23,6 +23,11 @@ export async function getInfo(email: string) {
 
     try {
 
+        const data = {
+            name: "",
+            email: "",
+            message: ''
+        }
 
         const user = await prisma.info.findUnique({
             where: {
@@ -31,11 +36,14 @@ export async function getInfo(email: string) {
         })
 
         if (!user) {
-            return false
+            data.message = "there is an error";
+        } else {
+            data.name = user?.name;
+            data.email = user?.email;
         }
 
 
-        return { user }
+        return data
     } catch (error) {
         console.error(error);
 
