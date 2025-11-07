@@ -20,7 +20,7 @@ export async function GET(request: Request) {
             return Response.json(data);
         }
 
-        return Response.json("fEmail is undefined")
+        return Response.json("Email is undefined")
 
     }
     catch (error) {
